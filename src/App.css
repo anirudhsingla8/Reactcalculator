@@ -1,0 +1,29 @@
+.result {
+  height: 60px;
+  /*background-color: #bbb;*/
+  width: 100%;
+}
+
+/*setting the property of input box*/
+.result p {
+  font-size: 40px;
+  margin: 5px;
+}
+
+/* setting teh calculator body */
+.calculator-body {
+  width: 350px;
+  margin: auto;
+}
+
+
+.button{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-auto-rows: minmax(60px,auto);
+}
+
+button {
+  height: 60px;
+  font-size: 30px;
+}
