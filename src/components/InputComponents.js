@@ -1,13 +1,13 @@
 import React,{Component} from 'react';
-class ResultComponents extends Component{
+class InputComponents extends Component{
     render(){
         let {result} = this.props;
         return(
           <div className='result'>
-              <p>{result}</p>
+              <span>{result}</span>
           </div>
         );
     }
 }
 
-export default ResultComponents;
+export default InputComponents;

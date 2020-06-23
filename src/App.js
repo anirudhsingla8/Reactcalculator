@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import ResultComponents from './components/ResultComponents';
-import KeypadComponent from "./components/KeypadComponent";
+import InputComponents from './components/InputComponents';
+import ButtonComponent from "./components/ButtonComponent";
 
 class App extends Component {
-  constructor(){
-    super();
-
-    this.state = {
+    state = {
       result: ""
     }
-  }
 
   onClick = button => {
 
@@ -45,7 +41,6 @@ class App extends Component {
 
     try {
       this.setState({
-        // eslint-disable-next-line
         result: (eval(checkResult) || "" ) + ""
       })
     } catch (e) {
@@ -72,9 +67,9 @@ class App extends Component {
     return (
         <div>
           <div className="calculator-body">
-            <h1>Simple Calculator</h1>
-            <ResultComponents result={this.state.result}/>
-            <KeypadComponent onClick={this.onClick}/>
+
+            <InputComponents result={this.state.result}/>
+            <ButtonComponent onClick={this.onClick}/>
           </div>
         </div>
     );
